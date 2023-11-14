@@ -40,6 +40,7 @@ h1 {
 .generator {
     position: relative;
     display: flex;
+    flex-direction: column;
     top: 200px;
     margin: auto;
     width: 30%;
@@ -51,6 +52,20 @@ h1 {
     border-width: 1px;
     border-radius: 25px;
     border-color: #64CB20;
+}
+
+.pwd-container {
+    width: 300px;
+    height:40px;
+    background-color: #141513;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#pwd {
+    color: #E6E7E4;
+    display: inline-block;
+    padding-top: 20px;
 }
 
 button {
@@ -80,3 +95,8 @@ a:hover {
     transition: all 0.5s;
 }
 
+input[type="checkbox"] {
+    accent-color: #141513;
+    border-width: 0px;
+    border-radius: 10px;
+}
