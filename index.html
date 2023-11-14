@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500&family=Exo+2:wght@200;300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <p>Pword_Gen</p>
+            <a href="#about">about</a>
+        </nav>
+    </div>
+
+    <div class="flvrtext">
+        <h1 class="bigtext">Password Generator</h1>
+        <p>Select from options below to build your password.</p>
+    </div>
+
+    <div class="generator">
+        <form>
+            <label for="pword">Your Password:</label><br>
+            <input type="text" id="pword" name="pword">
+            <br>
+            <br>
+            <input type="checkbox" id="num" name="num">
+            <label for="num">Include numbers</label><br>
+            <input type="checkbox" id="lcase" name="lcase">
+            <label for="lcase">Include lower-case</label><br>
+            <input type="checkbox" id="ucase" name="ucase">
+            <label for="ucase">Include upper-case</label><br>
+            <input type="checkbox" id="punct" name="punct">
+            <label for="punct">Include punctuation</label><br>
+            <br>
+            <button type="button" id="genbtn" name="genbtn">Generate</button>
+        </form>
+    </div>
+</body>
+</html>
