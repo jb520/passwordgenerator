@@ -92,7 +92,7 @@ a {
 
 a:hover {
     color: #8ae34f;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 input[type="checkbox"] {
