@@ -60,6 +60,10 @@ h1 {
     background-color: #141513;
     padding-bottom: 20px;
     text-align: center;
+    border-style: solid;
+    border-color: #8ae34f;
+    border-width: 1px;
+    border-radius: 10px;
 }
 
 #pwd {
@@ -77,6 +81,7 @@ button {
     border-width: 5px;
     border-style: solid;
     border-color: #141513;
+    border-radius: 10px;
     width: 100%;
 }
 

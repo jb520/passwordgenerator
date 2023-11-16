@@ -18,36 +18,37 @@ const genFunc = {
 
 //Generate Button click event
 generateEl.addEventListener('click', () => {
-    const pwLength = +lengthEl.value;
+    const length = +lengthEl.value;
     const hasNum = numEl.checked;
     const hasLcase = lcaseEl.checked;
     const hasUcase = ucaseEl.checked;
     const hasSym = symEl.checked;
 
-    resultEl.innerText = generatePassword(pwLength, hasNum, hasLcase, hasUcase, hasSym);
+    resultEl.innerText = generatePassword( hasNum, hasLcase, hasUcase, hasSym, length);
 });
 
 //Generate Password function
-function generatePassword(num, lcase, ucase, sym, pwLength) {
-
+function generatePassword( num, lcase, ucase, sym, length) {
     let newPassword = '';
-
     const checkCount = num + lcase + ucase + sym;
     const checkArr = [{num}, {lcase}, {ucase}, {sym}].filter(item => Object.values(item)[0]);
 
+    // Nothing is checked
     if(checkCount === 0) {
         return '';
     }
 
-    for(let i = 0; i < pwlength; i += checkCount) {
+    for(let i = 0; i < length; i += checkCount) {
         checkArr.forEach(type => {
             const funcName = Object.keys(type)[0];
-            console.log('funcName:', funcName);
 
             newPassword += genFunc[funcName]();
         });
     }
 
+    const result = newPassword.slice(0, length);
+	
+	return result;
 }
 
 // Generator functions - https://net-comber.com/charset.html
